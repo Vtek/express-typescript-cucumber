@@ -1,0 +1,26 @@
+{
+  "name": "SampleTypScriptNodeCucumber",
+  "version": "1.0.0",
+  "description": "Sample TypScript + Node + Cucumber",
+  "scripts": {
+    "build": "tsc",
+    "test": "cucumber-js features/",
+    "test-result": "cucumber-js features/ --format=json > test.results.json",
+    "test-result-junit": "cat test.results.json | cucumber-junit > test.results.xml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vtek/SampleTypeScriptNodeCucumber.git"
+  },
+  "private": false,
+  "author": "Vtek",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/cucumber": "^2.0.4",
+    "chai": "^4.1.2",
+    "cucumber": "^3.1.0",
+    "cucumber-junit": "^1.7.0",
+    "typescript": "^2.6.1"
+  }
+}
