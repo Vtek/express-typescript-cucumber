@@ -1,26 +1,21 @@
 {
-  "name": "SampleTypScriptNodeCucumber",
+  "name": "calculator",
   "version": "1.0.0",
-  "description": "Sample TypScript + Node + Cucumber",
+  "description": "TypScript & Cucumber - Calculator",
   "scripts": {
-    "build": "tsc",
-    "test": "cucumber-js features/",
-    "test-result": "cucumber-js features/ --format=json > test.results.json",
-    "test-result-junit": "cat test.results.json | cucumber-junit > test.results.xml"
+    "test": "cucumber-js features/"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Vtek/SampleTypeScriptNodeCucumber.git"
+    "url": "https://github.com/Vtek/TypeScriptNodeCucumber.git"
   },
   "private": false,
   "author": "Vtek",
   "dependencies": {},
   "devDependencies": {
-    "@types/chai": "^4.0.4",
-    "@types/cucumber": "^2.0.4",
+    "@types/chai": "^4.1.2",
+    "@types/cucumber": "^4.0.0",
     "chai": "^4.1.2",
-    "cucumber": "^3.1.0",
-    "cucumber-junit": "^1.7.0",
-    "typescript": "^2.6.1"
+    "cucumber": "^4.0.0"
   }
 }
