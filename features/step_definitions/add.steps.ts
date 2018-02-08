@@ -2,14 +2,21 @@ import { expect } from "chai";
 import { defineSupportCode, World } from "cucumber";
 import { Calculator } from "../../src/calculator";
 
-defineSupportCode(({ When, Then }) => {
+defineSupportCode(({ Given, When, Then }) => {
 
     const context = {
+        calculator: null,
         result: 0
     }
 
+    Given("a calculator", () => {
+        context.calculator = new Calculator();
+        return;
+    });
+
     When("I add {int} and {int}", (number1, number2) => {
-        context.result = Calculator.Add(<number>number1, <number>number2);
+        const calculator = context.calculator as Calculator;
+        context.result = calculator.Add(<number>number1, <number>number2);
         return;
     });
 
