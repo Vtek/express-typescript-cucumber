@@ -12,13 +12,13 @@ Given("a calculator", () => {
     return;
 });
 
-When("I add {int} and {int}", (number1, number2) => {
+When("I add {int} and {int}", (number1: number, number2: number) => {
     const calculator = context.calculator as Calculator;
     context.result = calculator.Add(<number>number1, <number>number2);
     return;
 });
 
-Then("the result is {int}", (result) => {
+Then("the result is {int}", (result: number) => {
     const actual = context.result;
     expect(actual).be.equal(result);
     return;
