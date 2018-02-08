@@ -58,5 +58,5 @@ typings/
 .env
 
 #tsc result
-src/*.js
-features/**/*.js
+*.js
+*.js.map
