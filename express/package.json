@@ -1,0 +1,23 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "description": "TypScript & Cucumber - Search Rest Api",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js features/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vtek/TypeScriptNodeCucumber.git"
+  },
+  "license": "MIT",
+  "private": false,
+  "author": "Vtek",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/cucumber": "^4.0.0",
+    "chai": "^4.1.2",
+    "cucumber": "^4.0.0"
+  }
+}
