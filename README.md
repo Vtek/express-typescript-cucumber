@@ -1,1 +1,1 @@
-# SampleTypeScriptNodeCucumber
+# Express + TypeScript + Cucumber example
