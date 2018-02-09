@@ -1,3 +1,3 @@
 # Express, TypeScript & Cucumber
 
-This repository contains an express api example.
+This repository contains a Rest API example.
