@@ -88,7 +88,7 @@ When('I search for {string} on Google', (searchValue: string, done: CallbackStep
     });
 });
 
-Then('results are', (table: TableDefinition) => {
+Then('results are', (table: TableDefinition, done: CallbackStepDefinition) => {
     const world = this as World;
     const websites = world.convert(table);
 
@@ -96,4 +96,6 @@ Then('results are', (table: TableDefinition) => {
         statusCode: 200,
         websites: websites
     });
+
+    done();
 });
