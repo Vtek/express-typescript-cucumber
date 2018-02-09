@@ -9,6 +9,7 @@
     "type": "git",
     "url": "https://github.com/Vtek/TypeScriptNodeCucumber.git"
   },
+  "license": "MIT",
   "private": false,
   "author": "Vtek",
   "dependencies": {},

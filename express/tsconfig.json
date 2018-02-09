@@ -2,8 +2,15 @@
   "compilerOptions": {
     /* Basic Options */
     "target": "es5",
+    "lib": [
+      "es5",
+      "es6",
+      "dom"
+    ],
     "module": "commonjs",
-    "sourceMap": true
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
   "exclude": [
     "node_modules"
