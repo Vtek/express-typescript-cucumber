@@ -1,5 +1,5 @@
 import * as express from 'express';
-import { interfaces, controller, queryParam, response, httpGet } from "inversify-express-utils";
+import { interfaces, controller, queryParam, response, httpGet } from 'inversify-express-utils';
 import { IWebsiteRepository } from '../repositories/interfaces';
 import { inject } from 'inversify';
 import { TYPES } from '../types';

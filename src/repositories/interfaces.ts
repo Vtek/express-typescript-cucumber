@@ -1,4 +1,4 @@
-import { Website } from "../models/Website";
+import { Website } from '../models/Website';
 
 export interface IConfiguration {
     fileName: string;
