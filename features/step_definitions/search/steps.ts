@@ -32,11 +32,11 @@ When('I search for {string} on Google', function (searchValue: string, done: Cal
 });
 
 Then('results are', function (table: TableDefinition, done: CallbackStepDefinition) {
-    const websites = this.convert(table);
+    const expectedWebsites = this.convert(table);
 
     expect(this.actual).to.be.deep.equal({
         statusCode: 200,
-        websites: websites
+        websites: expectedWebsites
     });
 
     done();
