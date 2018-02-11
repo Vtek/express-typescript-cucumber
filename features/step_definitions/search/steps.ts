@@ -41,3 +41,9 @@ Then('results are', function (table: TableDefinition, done: CallbackStepDefiniti
 
     done();
 });
+
+Then('i have an error', function (done: CallbackStepDefinition) {
+    const expectedStatusCode = 400;
+    expect(this.actual.statusCode).to.be.equal(expectedStatusCode);
+    done();
+});

@@ -4,7 +4,7 @@
   "description": "TypScript & Cucumber - Search Rest Api",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js features/"
+    "test": "cucumber-js features/;"
   },
   "repository": {
     "type": "git",

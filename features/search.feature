@@ -17,3 +17,7 @@ Feature: Search on Google
     | https://www.typescriptlang.org/ | TypeScript - JavaScript that scales. | TypeScript brings you optional static type-checking along with the latest ECMAScript features. |
     | https://github.com/Microsoft/TypeScript| GitHub - Microsoft/TypeScript: TypeScript is a superset of JavaScript | TypeScript is a language for application-scale JavaScript. TypeScript adds optional types, classes, and modules to JavaScript. TypeScript supports tools for large-scale JavaScript applications for any browser, for any host, on any OS. |
     | https://www.npmjs.com/package/cucumber-tsflow|cucumber-tsflow - npm|Bindings provide the automation that connects a specification step in a Gherkin feature file to some code that executes for that step. When using Cucumber with TypeScript you can define this automation using a 'binding' class: import { binding } from "cucumber-tsflow";|
+
+Scenario: Search without a value
+    When I search for "" on Google
+    Then i have an error

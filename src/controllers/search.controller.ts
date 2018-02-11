@@ -14,7 +14,12 @@ export class SearchController implements interfaces.Controller {
 
     @httpGet('/')
     async index(@queryParam('value') value, @response() res: express.Response) {
-        const websites = await this.websiteRepository.search(value);
-        res.status(200).send(websites);
+
+        if (!value) {
+            res.sendStatus(400);
+        } else {
+            const websites = await this.websiteRepository.search(value);
+            res.status(200).send(websites);
+        }
     }
 }
