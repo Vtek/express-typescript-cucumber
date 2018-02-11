@@ -28,7 +28,12 @@ export class WebsiteRepository implements IWebsiteRepository {
                         url: row.url
                     });
                 });
-                resolve(websites);
+
+                this.database.close((closeErr) => {
+                    if (closeErr)
+                        reject(closeErr);
+                    resolve(websites);
+                });
             });
         });
     }
