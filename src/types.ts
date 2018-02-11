@@ -1,6 +1,6 @@
 const TYPES = {
-    Configuration: Symbol.for('Configuration'),
-    WebsiteRepository: Symbol.for('SearchRepository')
+    WebsiteRepository: Symbol.for('WebsiteRepository'),
+    Database: Symbol.for('Database'),
 }
 
 export { TYPES };

@@ -1,13 +1,13 @@
 import 'reflect-metadata';
 import { InversifyExpressServer } from 'inversify-express-utils';
 import { Container } from 'inversify';
-import { IConfiguration, IWebsiteRepository } from './repositories/interfaces';
-import { WebsiteRepository } from './repositories/website.repository'
+import { IWebsiteRepository, WebsiteRepository } from './repositories/website.repository'
 import * as bodyParser from 'body-parser';
 
-// declare metadata by @controller annotation
 import './controllers/search.controller';
 import { TYPES } from './types';
+import { Database } from 'sqlite3';
+import { Website } from './models/Website';
 
 export class Server {
     readonly container: Container;
@@ -19,12 +19,8 @@ export class Server {
             .to(WebsiteRepository);
 
         this.container
-            .bind<IConfiguration>(TYPES.Configuration)
-            .toDynamicValue(() => {
-                return {
-                    fileName: 'db.sqlite3'
-                }
-            });
+            .bind<Database>(TYPES.Database)
+            .toDynamicValue(() => new Database('db.sqlite3'));
     }
 
     get(): InversifyExpressServer {

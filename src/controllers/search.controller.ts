@@ -1,8 +1,10 @@
 import * as express from 'express';
 import { interfaces, controller, queryParam, response, httpGet } from 'inversify-express-utils';
-import { IWebsiteRepository } from '../repositories/interfaces';
 import { inject } from 'inversify';
+
 import { TYPES } from '../types';
+import { Website } from '../models/Website';
+import { IWebsiteRepository } from '../repositories/website.repository';
 
 @controller('/search')
 export class SearchController implements interfaces.Controller {
