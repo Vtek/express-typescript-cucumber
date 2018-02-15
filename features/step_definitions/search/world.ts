@@ -36,7 +36,7 @@ export class SearchWorld implements World {
     convert(table: TableDefinition): Website[] {
         const websites: Website[] = [];
         const rows = table.rows();
-        for (let i = 1, l = rows.length; i < l; i++) {
+        for (let i = 0, l = rows.length; i < l; i++) {
             websites.push({
                 url: rows[i][0],
                 title: rows[i][1],

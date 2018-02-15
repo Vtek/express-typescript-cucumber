@@ -11,13 +11,9 @@ import './world';
 import './hooks';
 
 Given('these websites on the web', function (table: TableDefinition, done: CallbackStepDefinition) {
-    const websites = this.convert(table);
-    (async () => {
-        websites.forEach(async (website) => {
-            await this.add(website);
-        });
-        done();
-    })();
+    Promise
+        .all(Array.from(this.convert(table), (website) => this.add(website)))
+        .then(() => done());
 });
 
 When('I search for {string} on Google', function (searchValue: string, done: CallbackStepDefinition) {
@@ -34,6 +30,7 @@ When('I search for {string} on Google', function (searchValue: string, done: Cal
 Then('results are', function (table: TableDefinition, done: CallbackStepDefinition) {
     const expectedWebsites = this.convert(table);
 
+    expect(table.rows().length).equal(this.actual.websites.length);
     expect(this.actual).to.be.deep.equal({
         statusCode: 200,
         websites: expectedWebsites
